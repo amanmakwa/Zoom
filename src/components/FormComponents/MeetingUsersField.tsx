@@ -8,6 +8,7 @@ const MeetingUsersField = ({
     selectedOptions,
     isClearable,
     placeholder,
+    singleSelection=false,
 }:{
     label:string;
     options:any;
@@ -15,10 +16,12 @@ const MeetingUsersField = ({
     selectedOptions: any;
     isClearable:boolean;
     placeholder:string;
+    singleSelection:any;
+    
 }) => {
   return (
    <EuiFormRow label={label}>
-        <EuiComboBox/>
+        <EuiComboBox options={options} onChange={onChange} selectedOptions={selectedOptions} singleSelection={singleSelection} placeholder={placeholder} isClearable={isClearable} />
    </EuiFormRow>
   )
 }

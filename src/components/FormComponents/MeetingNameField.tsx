@@ -11,4 +11,4 @@ const MeetingNameField = ({  label,placeholder,value,setMeetingName}:{
   )
 }
 
-export default MeetingNameField 
+export default MeetingNameField;
