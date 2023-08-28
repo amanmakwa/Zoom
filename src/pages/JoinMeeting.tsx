@@ -8,6 +8,7 @@ import useToast from "../hooks/useToast";
 import { firebaseAuth, meetingsRef } from "../utils/FirebaseConfig";
 import { generateMeetingID } from "../utils/genereteMeetingId";
 
+
 export default function JoinMeeting() {
   const params = useParams();
   const navigate = useNavigate();
@@ -98,8 +99,7 @@ export default function JoinMeeting() {
     );
     const zp = ZegoUIKitPrebuilt.create(kitToken);
 
-    zp?.joinRoom()
-
+    zp.joinRoom();
   };
 
   return isAllowed ? (

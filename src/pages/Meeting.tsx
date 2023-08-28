@@ -36,14 +36,14 @@ export default function Meeting() {
             myMeetings.push(meeting.data() as MeetingType);
           else if (data.meetingType === "anyone-can-join")
             myMeetings.push(meeting.data() as MeetingType);
-          // else {
-          //   const index = data.invitedUsers.findIndex(
-          //     (user : String) => user === userInfo?.uid
-          //   );
-          //   if (index !== -1) {
-          //     myMeetings.push(meeting.data() as MeetingType);
-          //   }
-          // }
+          else {
+            const index = data.invitedUsers.findIndex(
+              (user : String) => user === userInfo?.uid
+            );
+            if (index !== -1) {
+              myMeetings.push(meeting.data() as MeetingType);
+            }
+          }
         });
 
         setMeetings(myMeetings);
